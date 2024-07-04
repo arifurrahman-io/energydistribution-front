@@ -14,20 +14,22 @@ const Login = () => {
   };
 
   return (
-    <div className="login">
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <div className="flex flex-col max-w-[400px] shadow-md mx-auto mt-10 p-10">
+      <h1 className='text-2xl py-3 mx-auto'>Login</h1>
+      <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col py-5'>
         <input
           type="email"
           placeholder="Email"
+          className='my-2 p-3 bg-green-100'
           {...register('email', { required: true })}
         />
         <input
           type="password"
           placeholder="Password"
+          className='my-2 p-3 bg-green-100'
           {...register('password', { required: true })}
         />
-        <button type="submit">Login</button>
+        <button type="submit" className='mt-2 bg-green-500 text-white'>Login</button>
       </form>
     </div>
   );
